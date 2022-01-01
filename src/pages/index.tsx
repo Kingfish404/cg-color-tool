@@ -82,10 +82,7 @@ const Home: NextPage = () => {
           className={styles.label}>
           <span>{backgroundColor}</span>
           <span>{backgroundColorNext}</span>
-          <hr
-            style={{
-              color: color
-            }} />
+          <br />
           <span>{backgroundColorRG}</span>
         </div>
         <input

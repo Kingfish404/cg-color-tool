@@ -1,5 +1,5 @@
 {
-  "name": "next-cg-tools",
+  "name": "cg-color-tool",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -3,9 +3,9 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import styles from '../styles/index.module.scss'
 
-const regHex = /#[0-9a-fA-F]{3,6}/g;
-const regRGB = /(\d|(\d{2})|(1\d{2})|(2[0-5]{2})),(\d|(\d{2})|(1\d{2})|(2[0-5]{2})),(\d|(\d{2})|(1\d{2})|(2[0-5]{2}))/g;
-const regRG = /(0|1|(0\.\d+)),(0|1|(0\.\d+)),(0|1|(0\.\d+))/g
+const regHex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/g;
+const regRGB = /^(\d|(\d{2})|(1\d{2})|(2[0-5]{2})),(\d|(\d{2})|(1\d{2})|(2[0-5]{2})),(\d|(\d{2})|(1\d{2})|(2[0-5]{2}))$/g;
+const regRG = /^(0|1|(0\.\d+)),(0|1|(0\.\d+)),(0|1|(0\.\d+))$/g
 
 function rgbToHexArr(rgb: string): Array<string> {
   const arr: Array<number> = rgb.substring(4, rgb.length - 1).split(',').map(v => (Number(v)));

@@ -1,6 +1,9 @@
 .container {
   width: 100vw;
   height: 100vh;
+  * {
+    color: var(--color);
+  }
 }
 
 .main {
@@ -12,23 +15,23 @@
   text-align: center;
 
   input {
+    display: block;
+    width: 100%;
     font-size: medium;
     margin: 5px 0;
     padding: 3px;
-    background: none;
-    outline: none;
-    border: none;
+    background: unset;
+    border: unset;
     border-bottom: 1px dashed;
 
     &::placeholder {
-      color: #eee;
+      color: var(--color);
       font-weight: lighter;
     }
   }
 }
 
 .label {
-  color: #333;
   min-width: 80vw;
   max-width: 800px;
   text-align: center;
@@ -41,4 +44,9 @@
     overflow: scroll;
     word-break: break-all;
   }
+}
+
+.colorPicker {
+  border: unset !important;
+  outline: 1px solid;
 }
